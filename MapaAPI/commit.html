@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+				
+    <title>Comentarios</title>
+</head>
+
+<body style="background-image: url(img/1.jpg)">
+        <nav class="" style="background-color: #212121">
+        <strong class="white-text" style="font-size: 40px; margin-left: 30%;">Comentários sobre o projeto</strong>
+<strong style="margin-left: 10%"><a href="index.html">voltar ao Jack's World Place Searcher</a></strong>
+    </nav>
+<div class="row">
+    <ul class="collapsible col s4">
+            <li>
+              <div class="collapsible-header"><code>sequência lógica das funções utilizadas no projeto:</code><img src="https://img.icons8.com/nolan/35/000000/drag-list-down.png"></div>
+              <div class="collapsible-body" style="background-color:#212121;"><span class="white-text"><code> utilizadas 8 functions e 3 arrow function, são elas em sequência:</code><hr/>
+                Primeiramente foi usado uma função,fCidade(), para pegar o valor digitado pelo usuário no input, e usei um return "cidade" para poder usar o valor dessa função depois... <hr/> 
+                Depois foi utilizado uma outra função, dados(), onde é realizada a requisição à API do mapbox.com, então eu pego a função fCidade() para concatenar na url que é usada como "endereço" dos dados a serem requisitados, utilizo essa linha: *requisicao.open('GET', url, true);*, para abrir a conexão e o "true" para determinar que será assíncrona... resaltando que dentro dessa function existe outra function, porém essa é uma void, function(e)... <hr/>
+               A terceira function, valor(), serve para percorrer a resposta da requisição, para isso é feito o uso de um for, que percorre features atrás das coordenadas e o nome dos locais achados... E quando ele acha as coordenadas e os nomes de cada um dos 5 primeiros resultados encontrados, esses valores são passados diretamente como parâmetro para a function inserirItem().<hr/>
+              A quarta function, create(), está apenas criando uma div e um ol, com createElement, essa div e ol são usadas para se jogar os nomes dos locais achados da requisição. Assim eu torno a "var info" filha da div "principal" que já está fixada no documento HTML(index.html), e torno a "var ol" filha da div "info".<hr/>
+            A quinta function, inserirItem(nome_do_item, id, lt,lg), está recebendo os valores passados por parâmetro da function valor(), além disso nela são cridas e geradas as li que estão com o conteúdo dos nomes dos lugares. nessa function, eu utilizei de uma função, String(), para transformar os valores das coordenadas em string, e então uso uma variável "map" para guardar a função concatenada em forma de string com as coordenadas(lt e lg). após esse processo basicamente eu uso um onclick atribuido a 'nova_link', chamando map, que armazena a funtion 'gerarMapa(coord)'. <hr/>
+          A próxima function, Mapa(), tem a função de usando createElement, criar uma div com o id "mapid", e a torna filha da div "MapaCentral" que já está criada no html. Também é agregado um style.width e height para dar tamanho ao mapa quando for carregado na tela. <hr/>
+        A sétima function é uma arrow function, const clear = () => {}, ela tem como única função limpar a div 'principal', onde fica os nomes dos locais, isso para que possa pesquisar locais várias vezes sem ser criadas um bucado de div, li, etc. <hr/>
+          A oitava function, também é uma arrow function, const limparMapa = () => {}, ela tem um objetivo parecido com a anterior, a diferença é que ela limpa a div "MapaCentral", para que se possam ser gerado mapas de varios locais sem ficar dando erro da API "container já foi inializado".<hr/>
+        A nona function é a ultima arrow function, const gerarMapa = (lat, long) => {}, quando ela é chamada outras duas functions também são chamadas (limparMapa() e Mapa()), após esse processo é gerado um mapa ,referente ao valor dos parâmetros lat e long, na div 'mapid'.<hr/>  
+          A última function, main(), ela tem a função de chamar as outras functions necessarias quando acontecer uma ação de click no button.  </li>
+        </span>
+          </ul>
+         
+         
+<div class="row">
+    <div class="col s8 m5 l8">
+      <div class="card-panel teal">
+        <span class="white-text"><code> Essa página web foi desenvolvida pelo discente Jackson Marcony Ribeiro Silva, que cursa para Tec. em informática para internet, no IF baiano campus Guanambi.</code> <hr/>
+          Concluida recentemente, a página será analisada com um intuido avaliativo pelo docente: Cleyton Fábio. <hr/>
+      <code>  Sendo proposto pelo docente o seguinte: Desenvolver uma página usando html incrementado à javascript, seria necessaria a utilização da API do mapbox junto a API do OpenStreetMap, essa página deveria encontrar cinco resultados com uma sintaxe apróximada da proposta pelo usuário e que ao clicar encima de um dos nomes dos locais, que serão gerados na tela por createElement, será gerado um mapa respectivo ao local.  </code>   
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ 
+          <!--<code>A piece of computer code</code>-->
+          
+
+
+          <script>  
+          document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.collapsible');
+                var instances = M.Collapsible.init(elems);
+              });
+            
+              // Or with jQuery
+            
+              $(document).ready(function(){
+                $('.collapsible').collapsible();
+              });
+          </script>
+</body>
+
+</html>
