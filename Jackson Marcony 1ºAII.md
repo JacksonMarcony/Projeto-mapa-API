@@ -6,7 +6,7 @@
 * A requisição deverá resultar 5 itens de locais equivalentes a busca realizada;
 * A aplicação foi realizada com Java Script puro;
   
-  
+  <hr>
   
 ### Tela com pesquisa "São Paulo" e os cincos resultados da requisição:
 
