@@ -6,4 +6,11 @@
 * A requisição deverá resultar 5 itens de locais equivalentes a busca realizada;
 * A aplicação foi realizada com Java Script puro;
 
-![Alt ou título da imagem](https://github.com/JacksonMarcony/Projeto-mapa-API/blob/master/MapaAPI/img/one.png)
+### Tela com pesquisa "São Paulo" e os cincos resultados da requisição:
+
+![Tela de pesquisa](https://github.com/JacksonMarcony/Projeto-mapa-API/blob/master/MapaAPI/img/one.png)
+
+
+### Tela com pesquisa "São Paulo" e o mapa exibido:
+
+![Mapa](https://github.com/JacksonMarcony/Projeto-mapa-API/blob/master/MapaAPI/img/two.png)
